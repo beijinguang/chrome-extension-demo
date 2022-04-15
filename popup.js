@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-  $("div.app").on("click",function() {
+  $("body").on("click",".app",function() {
       console.log("段落被点击了。");
       window.open($(this).attr("weburl"), "_blank");
   })
