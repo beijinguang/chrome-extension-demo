@@ -1,0 +1,21 @@
+{
+    "name": "晋光的标签栏",
+    "description": "一个有趣的标签栏!",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "just a tool"
+    },
+    "options_page": "options.html"
+}
