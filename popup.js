@@ -114,16 +114,17 @@ function renderFooter(data) {
         })
       }
       tmpArr.push(`
-          </div>
+        </div>
           <div class="bg-blur"></div>
           <div class="folder-name">${it.name}</div>
         </div>`)
     } else {
       tmpArr.push(
         `
-          <div class="app" >
-            <div class="app-icon"></div>
-          </div>
+        <div class="app" weburl="${it.url}">
+        <div class="app-icon"></div>
+        <div class="app-name">${it.name}</div>
+      </div>
           `
       )
     }
