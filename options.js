@@ -71,8 +71,8 @@ function renderData() {
             `<tr>
         <td>-</td>
         <td>App</td>
-        <td>${it.name}</td>
-        <td>${it.url}</td>
+        <td>${item.name}</td>
+        <td>${item.url}</td>
         <td>
           <button class="btn btn-warning delete_data" data-id="${item.id}" data-parent="${it.id}">删除</button>
         </td>
