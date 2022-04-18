@@ -1,4 +1,14 @@
 
+navigator.getBattery().then(res=>{
+	console.log("电量："+JSON.stringify(res));
+});
+
+
+setInterval(function(){
+  var nowDate = (new Date()).toLocaleTimeString();
+  $(".clock").text(nowDate);
+},1000);       
+
 $(document).ready(function() {
   $("body").on("click",".app",function() {
       console.log("段落被点击了。");

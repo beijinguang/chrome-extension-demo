@@ -51,6 +51,7 @@ function serializeJSON(id) {
 function renderData() {
   getData().then(data => {
     rootData = data != null ? JSON.parse(data) : []
+    console.log(JSON.stringify(data));
     var tmpArr = []
     rootData.forEach((it) => {
       tmpArr.push(
