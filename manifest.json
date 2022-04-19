@@ -6,9 +6,12 @@
     "background": {
         "service_worker": "background.js"
     },
+    "homepage_url": "https://code.idea4j.com/",
     "permissions": [
         "storage",
-        "bookmarks"
+        "bookmarks",
+        "contextMenus",
+        "tabs"
     ],
     "host_permissions": [
         "http://*/*",
@@ -16,7 +19,14 @@
     ],
     "action": {
         "default_popup": "popup.html",
-        "default_title": "just a tool"
+        "default_title": "just a tool",
+        "default_icon": {              
+            "16": "images/icon.png"
+    
+        }
+    },
+    "omnibox": {
+        "keyword": "iphone"
     },
     "options_page": "options.html"
 }
