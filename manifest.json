@@ -1,11 +1,12 @@
 {
-    "name": "晋光的标签栏",
-    "description": "一个有趣的标签栏!",
+    "name": "__MSG_extensionName__",
+    "description": "__MSG_extensionDesc__",
     "version": "1.0",
     "manifest_version": 3,
     "background": {
         "service_worker": "background.js"
     },
+    "default_locale": "zh_CN",
     "homepage_url": "https://code.idea4j.com/",
     "permissions": [
         "storage",
@@ -35,6 +36,7 @@
         "48": "/images/icon48.png",
         "128": "/images/icon128.png"
     },
+
     "omnibox": {
         "keyword": "iphone"
     },
