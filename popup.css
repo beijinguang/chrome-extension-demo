@@ -456,7 +456,7 @@ input[type='radio']:nth-of-type(4):checked ~ .pages .bottom-bar {
   top: -476px;
 }
 .bottom-bar .folder-name {
-  display: none;
+  display: inherit;
 }
 .bottom-bar .folder-apps:focus .app {
   margin: 0 18px 27px 18px;
