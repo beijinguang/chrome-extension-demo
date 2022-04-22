@@ -1,5 +1,4 @@
 
-
 chrome.storage.onChanged.addListener(function (changes, namespace) {
     for (let [key, { oldValue, newValue }] of Object.entries(changes)) {
         console.log(
@@ -97,3 +96,50 @@ chrome.notifications.getPermissionLevel((level) => {
     console.log(level); //granted ( 批注：默认 granted )
 });
 
+
+
+chrome.action.onClicked.addListener((tab) => {
+    // chrome.scripting.executeScript({
+    //     target: {tabId: tab.id},
+    //     function: toggleDark
+    // });
+});
+
+function toggleDark() {
+    console.log("toggleDark")
+    if (!document.body.getAttribute('data-ext-dark')) {
+        document.body.setAttribute('data-ext-dark', true);
+        document.body.style.backgroundColor = '#000';
+        document.body.style.color = '#fff';
+    } else {
+        document.body.setAttribute('data-ext-dark', false);
+        document.body.style.backgroundColor = '#fff';
+        document.body.style.color = '#000';
+    }
+}
+
+chrome.commands.onCommand.addListener((command) => {
+    if (command === 'hello') {
+        console.log("Hello there!");
+    } else if (command === 'dark') {
+        var id = getCurrentTabId();
+        chrome.scripting.executeScript({
+            target: { tabId: id},
+            function: toggleDark
+        });
+    } else {
+        console.log("Date: " + (new Date).toDateString());
+    }
+});
+
+
+function getCurrentTabId()
+{
+	chrome.windows.getCurrent(function(currentWindow)
+	{
+		chrome.tabs.query({active: true, windowId: currentWindow.id}, function(tabs)
+		{
+			if(callback) callback(tabs.length ? tabs[0].id: null);
+		});
+	});
+}

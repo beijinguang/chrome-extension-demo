@@ -13,7 +13,9 @@
         "bookmarks",
         "contextMenus",
         "tabs",
-        "notifications"
+        "notifications",
+        "activeTab", 
+        "scripting"
     ],
     "host_permissions": [
         "http://*/*",
@@ -40,6 +42,25 @@
     },
     "omnibox": {
         "keyword": "iphone"
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": "Ctrl+Shift+1",
+            "description": "pop"
+        },
+        "hello": {
+            "suggested_key": "Ctrl+Shift+2",
+            "description": "Say Hello"
+        },
+        "date": {
+            "suggested_key": "Ctrl+Shift+8",
+            "description": "Show Date"
+        }
+        ,
+        "dark": {
+            "suggested_key": "Ctrl+Shift+3",
+            "description": "Toggle dark body"
+        }
     },
     "options_page": "options.html"
 }
